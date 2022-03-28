@@ -31,8 +31,8 @@ namespace Kurvendiskussion
             double yAchsenAbschnitt = Convert.ToDouble(EingB.Text);
             lineareFunktion f = new lineareFunktion(anstieg, yAchsenAbschnitt); //rufen so ein Konstruktor
 
-
-            string AusgabeText = "Die Nullstelle ist x_n=" + f.berechneNullstelle();
+            string AusgabeText;
+            AusgabeText = "Die Nullstelle ist x_n=" + f.berechneNullstelle();
             AusgabeText += "\nDer Schnittpunkt mit der xAchse liegt bei: (" + f.berechneNullstelle() + "/ 0)";
             Ausgabe.Text = AusgabeText;
         }
@@ -45,7 +45,11 @@ namespace Kurvendiskussion
             double yAchsenAbschnitt = Convert.ToDouble(EingB.Text);
             lineareFunktion f = new lineareFunktion(anstieg, yAchsenAbschnitt);
 
-            string AusgabeText = "Das berechnete y-Wert für gegebenen x-Wert ist = " + f.berechneFunktionswert(wert).ToString();
+            string AusgabeText;
+            AusgabeText = "Die Nullstelle ist x_n=" + f.berechneNullstelle();
+            AusgabeText += "\nDer Schnittpunkt mit der xAchse liegt bei: (" + f.berechneNullstelle() + "/ 0)";
+            AusgabeText += "\n\nDas berechnete y-Wert für gegebenen x-Wert ist = " + f.berechneFunktionswert(wert).ToString();
+            Ausgabe.Text = AusgabeText;
 
             Ausgabe.Text = AusgabeText;
         }
